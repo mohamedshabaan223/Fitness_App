@@ -1,4 +1,5 @@
 import 'package:fitness_app/common/colors_services.dart';
+import 'package:fitness_app/screens/sign_screen.dart';
 import 'package:fitness_app/widgets/custom_eleveted_botton.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -19,7 +20,9 @@ class CustomSkipNextBotton extends StatelessWidget {
 
         children: [
           CustomElevetedBotton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(context).push(MaterialPageRoute(builder: (_)=>SignScreen()));
+            },
             fixedSize: Size(width * 0.22, height * 0.1),
             backgroundColor: Colors.transparent,
             child: Text(
