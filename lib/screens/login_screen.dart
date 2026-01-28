@@ -1,5 +1,6 @@
 import 'package:fitness_app/common/colors_services.dart';
 import 'package:fitness_app/common/images_services.dart';
+import 'package:fitness_app/screens/second_login_screen.dart';
 import 'package:fitness_app/services/valodator_service.dart';
 import 'package:fitness_app/widgets/custom_eleveted_botton.dart';
 import 'package:fitness_app/widgets/custom_facebook_twitter.dart';
@@ -89,7 +90,9 @@ class _LoginPageState extends State<LoginScreen> {
                   SizedBox(height: 15),
                   CustomFacebookTwitter(),
                   SizedBox(height: 20),
-                  CustomHaveAccount(label: 'Signup'),
+                  CustomHaveAccount(label: 'Signup' , onTap: (){
+                    Navigator.pushReplacement(context, MaterialPageRoute(builder: (_)=> SecondLoginScreen()));
+                  },),
                 ],
               ),
             ),

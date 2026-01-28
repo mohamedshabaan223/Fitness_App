@@ -5,6 +5,7 @@ import 'package:fitness_app/widgets/custom_eleveted_botton.dart';
 import 'package:fitness_app/widgets/custom_label.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+
 class SignScreen extends StatelessWidget {
   const SignScreen({super.key});
 
@@ -38,33 +39,77 @@ class SignScreen extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
-             
-             CustomLabel(fitColor: ColorsServices.white2, kitColor:  ColorsServices.white2, containerColor:  ColorsServices.white2)
-              ,
+              CustomLabel(
+                fitColor: ColorsServices.white2,
+                kitColor: ColorsServices.white2,
+                containerColor: ColorsServices.white2,
+              ),
               SizedBox(height: height * 0.1),
-           Text('Lorem Ipsum is simply dummy text of' , style: GoogleFonts.openSans(fontSize: 16, fontWeight: FontWeight.w400, color: ColorsServices.white2),),
-           Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text('the printing and ', style: GoogleFonts.openSans(fontSize: 16, fontWeight: FontWeight.w400, color: ColorsServices.white2)),
-              Text('typesetting' ,style: GoogleFonts.openSans(fontSize: 17, fontWeight: FontWeight.w700, color: ColorsServices.white2))
-            ],
-           ),
-           SizedBox(height: height * 0.05),
-           CustomElevetedBotton(onPressed: (){}, 
-           
-            fixedSize: Size(366, 54),
-             backgroundColor: ColorsServices.red,
-             child: Text('S I G N  U P',style: GoogleFonts.faustina(fontSize: 24, fontWeight: FontWeight.w600, color: ColorsServices.white2)),),
-            SizedBox(height: height * 0.03),
-             CustomElevetedBotton(onPressed: (){
-              Navigator.pushReplacement(context, MaterialPageRoute(builder: (_)=>LoginScreen()));
-             }, 
-           
-            fixedSize: Size(200, 22),
-             backgroundColor: Colors.transparent,
-             child: Text('Log In With Account ',style: GoogleFonts.openSans(fontSize: 16, fontWeight: FontWeight.w400, color: ColorsServices.white2)),)
-           ,SizedBox(height: height * 0.03),
+              Text(
+                'Lorem Ipsum is simply dummy text of',
+                style: GoogleFonts.openSans(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w400,
+                  color: ColorsServices.white2,
+                ),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'the printing and ',
+                    style: GoogleFonts.openSans(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w400,
+                      color: ColorsServices.white2,
+                    ),
+                  ),
+                  Text(
+                    'typesetting',
+                    style: GoogleFonts.openSans(
+                      fontSize: 17,
+                      fontWeight: FontWeight.w700,
+                      color: ColorsServices.white2,
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(height: height * 0.05),
+              CustomElevetedBotton(
+                onPressed: () {},
+
+                fixedSize: Size(366, 54),
+                backgroundColor: ColorsServices.red,
+                child: Text(
+                  'S I G N  U P',
+                  style: GoogleFonts.faustina(
+                    fontSize: 24,
+                    fontWeight: FontWeight.w600,
+                    color: ColorsServices.white2,
+                  ),
+                ),
+              ),
+              SizedBox(height: height * 0.03),
+              CustomElevetedBotton(
+                onPressed: () {
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(builder: (_) => LoginScreen()),
+                  );
+                },
+
+                fixedSize: Size(200, 22),
+                backgroundColor: Colors.transparent,
+                child: Text(
+                  'Log In With Account ',
+                  style: GoogleFonts.openSans(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w400,
+                    color: ColorsServices.white2,
+                  ),
+                ),
+              ),
+              SizedBox(height: height * 0.03),
             ],
           ),
         ),
@@ -72,4 +117,3 @@ class SignScreen extends StatelessWidget {
     );
   }
 }
-
