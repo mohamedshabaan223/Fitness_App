@@ -21,7 +21,7 @@ class CustomSkipNextBotton extends StatelessWidget {
         children: [
           CustomElevetedBotton(
             onPressed: () {
-              Navigator.of(context).push(MaterialPageRoute(builder: (_)=>SignScreen()));
+              Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (_)=>SignScreen()));
             },
             fixedSize: Size(width * 0.22, height * 0.1),
             backgroundColor: Colors.transparent,

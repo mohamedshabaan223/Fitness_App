@@ -1,5 +1,6 @@
 import 'package:fitness_app/common/colors_services.dart';
 import 'package:fitness_app/common/images_services.dart';
+import 'package:fitness_app/screens/login_screen.dart';
 import 'package:fitness_app/widgets/custom_eleveted_botton.dart';
 import 'package:fitness_app/widgets/custom_label.dart';
 import 'package:flutter/material.dart';
@@ -56,7 +57,9 @@ class SignScreen extends StatelessWidget {
              backgroundColor: ColorsServices.red,
              child: Text('S I G N  U P',style: GoogleFonts.faustina(fontSize: 24, fontWeight: FontWeight.w600, color: ColorsServices.white2)),),
             SizedBox(height: height * 0.03),
-             CustomElevetedBotton(onPressed: (){}, 
+             CustomElevetedBotton(onPressed: (){
+              Navigator.pushReplacement(context, MaterialPageRoute(builder: (_)=>LoginScreen()));
+             }, 
            
             fixedSize: Size(200, 22),
              backgroundColor: Colors.transparent,
