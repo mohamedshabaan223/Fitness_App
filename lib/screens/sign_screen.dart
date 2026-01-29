@@ -1,6 +1,7 @@
 import 'package:fitness_app/common/colors_services.dart';
 import 'package:fitness_app/common/images_services.dart';
 import 'package:fitness_app/screens/login_screen.dart';
+import 'package:fitness_app/screens/second_login_screen.dart';
 import 'package:fitness_app/widgets/custom_eleveted_botton.dart';
 import 'package:fitness_app/widgets/custom_label.dart';
 import 'package:flutter/material.dart';
@@ -76,7 +77,9 @@ class SignScreen extends StatelessWidget {
               ),
               SizedBox(height: height * 0.05),
               CustomElevetedBotton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (_)=>SecondLoginScreen()));
+                },
 
                 fixedSize: Size(366, 54),
                 backgroundColor: ColorsServices.red,

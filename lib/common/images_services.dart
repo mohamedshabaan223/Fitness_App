@@ -6,4 +6,6 @@ class ImagesServices {
   static const String twitter = 'assets/images/twitter.png';
   static const String password = 'assets/images/password 1.png';
   static const String user = 'assets/images/user 1.png';
+  static const String female = 'assets/images/female 1.png';
+  static const String male = 'assets/images/male 1.png';
 }

@@ -1,5 +1,6 @@
 import 'package:fitness_app/common/colors_services.dart';
 import 'package:fitness_app/common/images_services.dart';
+import 'package:fitness_app/screens/gender_screen.dart';
 import 'package:fitness_app/screens/second_login_screen.dart';
 import 'package:fitness_app/services/valodator_service.dart';
 import 'package:fitness_app/widgets/custom_eleveted_botton.dart';
@@ -71,7 +72,9 @@ class _LoginPageState extends State<LoginScreen> {
                   SizedBox(height: hight * 0.04),
                   CustomElevetedBotton(
                     onPressed: () {
-                      globalKey.currentState!.validate();
+                      if(globalKey.currentState!.validate()){
+                        Navigator.pushReplacement(context, MaterialPageRoute(builder: (_)=>GenderScreen()));
+                      }
                     },
                     backgroundColor: ColorsServices.red,
                     fixedSize: Size(384, 54),
