@@ -1,3 +1,4 @@
+import 'package:fitness_app/screens/help_screen.dart';
 import 'package:fitness_app/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -8,7 +9,7 @@ class FitnessApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SplashScreen(),
+      home: HelpScreen(),
     );
   }
 }

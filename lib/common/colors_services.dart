@@ -12,4 +12,6 @@ class ColorsServices {
   static const Color blue2 = Color(0xff00A4F9);
   static const Color black2 = Color(0xff000000);
   static const Color white2 = Color(0xffffffff);
+  static const Color grey3 = Color(0xffCECECE);
+  static const Color grey4 = Color(0XFFF3F3F3);
 }
