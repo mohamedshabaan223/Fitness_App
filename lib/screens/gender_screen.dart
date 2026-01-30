@@ -1,5 +1,6 @@
 import 'package:fitness_app/common/colors_services.dart';
 import 'package:fitness_app/common/images_services.dart';
+import 'package:fitness_app/screens/help_screen.dart';
 import 'package:fitness_app/widgets/custom_eleveted_botton.dart';
 import 'package:fitness_app/widgets/custom_gender_image.dart';
 import 'package:fitness_app/widgets/custom_label.dart';
@@ -40,7 +41,9 @@ class GenderScreen extends StatelessWidget {
               CustomGenderImage(url: ImagesServices.female, onTap: () {}),
               SizedBox(height: hight * 0.05),
               CustomElevetedBotton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (_)=>HelpScreen()));
+                },
                 fixedSize: Size(384, 54),
                 backgroundColor: ColorsServices.red,
                 child: Text(

@@ -1,4 +1,5 @@
 import 'package:fitness_app/common/colors_services.dart';
+import 'package:fitness_app/screens/home_screen.dart';
 import 'package:fitness_app/widgets/build_option.dart';
 import 'package:fitness_app/widgets/custom_eleveted_botton.dart';
 import 'package:fitness_app/widgets/custom_label.dart';
@@ -75,7 +76,9 @@ class _IntendedPurposeState extends State<HelpScreen> {
               Spacer(),
 
               CustomElevetedBotton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (_)=>HomeScreen()));
+                },
                 fixedSize: Size(384, 54),
                 backgroundColor: ColorsServices.red,
                 child: Text(
