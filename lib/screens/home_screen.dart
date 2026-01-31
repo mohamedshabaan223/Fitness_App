@@ -1,5 +1,9 @@
 import 'package:fitness_app/common/colors_services.dart';
 import 'package:fitness_app/common/images_services.dart';
+import 'package:fitness_app/tabs/home_tab/home_tab.dart';
+import 'package:fitness_app/tabs/message_tab/message_tab.dart';
+import 'package:fitness_app/tabs/notification_tab/notification_tab.dart';
+import 'package:fitness_app/tabs/profile_tab/profile_tab.dart';
 import 'package:fitness_app/widgets/custom_bottom_navigation_bar.dart';
 import 'package:fitness_app/widgets/custom_drawer.dart';
 
@@ -16,91 +20,52 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+    List<Widget> tabs =[
+    HomeTab(),
+    NotificationTab(),
+    ProfileTab(),
+    MessageTab(),
+  ];
+  int currentIndex =0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      drawer: CustomDrawer(),
-      appBar: AppBar(
-        backgroundColor: ColorsServices.red,
-        centerTitle: true,
-          leading: Image.asset(ImagesServices.drawerIcon),
-        title: Text(
-          'Home',
-          style: GoogleFonts.faustina(
-            fontSize: 24,
-            fontWeight: FontWeight.w500,
-            color: ColorsServices.white,
+      
+
+      body:tabs[currentIndex],
+
+      bottomNavigationBar:BottomNavigationBar(
+        backgroundColor: ColorsServices.white2,
+        type: BottomNavigationBarType.fixed,
+        currentIndex: currentIndex,
+        selectedItemColor: ColorsServices.red,
+        unselectedItemColor: ColorsServices.grey,
+        onTap: (index) {
+         
+          setState(() {
+             currentIndex = index;
+          });
+        },
+        items: const [
+          BottomNavigationBarItem(
+            icon: ImageIcon(AssetImage(ImagesServices.home)),
+            label: '',
           ),
-        ),
-
-        actions: const [
-          Icon(Icons.search, color: Colors.white),
-          SizedBox(width: 10),
+          BottomNavigationBarItem(
+            icon: ImageIcon(AssetImage(ImagesServices.notification)),
+            label: '',
+          ),
+          BottomNavigationBarItem(
+            icon: ImageIcon(AssetImage(ImagesServices.user)),
+            label: '',
+          ),
+          BottomNavigationBarItem(
+            icon: ImageIcon(AssetImage(ImagesServices.message)),
+            label: '',
+          ),
         ],
-      ),
-
-      body: SingleChildScrollView(
-        padding: EdgeInsets.all(20),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              'Workout Exercises',
-              style: GoogleFonts.faustina(fontSize: 24, fontWeight: FontWeight.w500, color: ColorsServices.black)
-            ),
-            SizedBox(height: 15),
-
-            SizedBox(
-              height: 180,
-              child: ListView(
-                scrollDirection: Axis.horizontal,
-                children: const [
-                  WorkCard(
-                    title: 'Abs\nPerfection',
-                    image:
-                        "https://img.freepik.com/premium-photo/barbell-fitness-training-gym_250469-12439.jpg",
-                  ),
-                  WorkCard(
-                    title: 'Good\nCardio',
-                    image:
-                        "https://tse3.mm.bing.net/th/id/OIP.o0vq2kOIxPfvaQqYJYrIagHaE7?rs=1&pid=ImgDetMain",
-                  ),
-                  WorkCard(
-                    title: 'Arms\nStretching',
-                    image:
-                        "https://tse1.mm.bing.net/th/id/OIP.EwbatycHx_915hcNzd7vRgHaE8?rs=1&pid=ImgDetMain&o=7&rm=3",
-                  ),
-                ],
-              ),
-            ),
-
-            SizedBox(height: 30),
-
-            Text(
-              'Training Plan',
-              style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
-            ),
-            SizedBox(height: 15),
-
-            GridView.count(
-              shrinkWrap: true,
-              crossAxisCount: 2,
-              crossAxisSpacing: 15,
-              mainAxisSpacing: 15,
-              childAspectRatio: 0.85,
-              children: const [
-                PlanCard(title: 'Shoulder Press'),
-                PlanCard(title: 'Jogging'),
-                PlanCard(title: 'Shoulder Press'),
-                PlanCard(title: 'Jogging'),
-              ],
-            ),
-          ],
-        ),
-      ),
-
-      bottomNavigationBar:CustomBottomNavigationBar()
+      )
     );
   }
 }

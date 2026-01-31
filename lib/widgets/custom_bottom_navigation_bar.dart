@@ -3,7 +3,8 @@ import 'package:fitness_app/common/images_services.dart';
 import 'package:flutter/material.dart';
 
 class CustomBottomNavigationBar extends StatefulWidget {
-  const CustomBottomNavigationBar({super.key});
+   int currentIndex ;
+   CustomBottomNavigationBar({super.key, required this.currentIndex});
 
   @override
   State<CustomBottomNavigationBar> createState() => _CustomBottomNavigationBarState();
@@ -16,13 +17,13 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
     return  BottomNavigationBar(
         backgroundColor: ColorsServices.white2,
         type: BottomNavigationBarType.fixed,
-        currentIndex: currentIndex,
+        currentIndex: widget.currentIndex,
         selectedItemColor: ColorsServices.red,
         unselectedItemColor: ColorsServices.grey,
         onTap: (index) {
-          currentIndex = index;
+         
           setState(() {
-            
+             widget.currentIndex = index;
           });
         },
         items: const [
