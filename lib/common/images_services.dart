@@ -14,4 +14,5 @@ class ImagesServices {
   static const String weighet = 'assets/images/Group (1).png';
   static const String drawerIcon = 'assets/images/menu 1.png';
   static const String close = 'assets/images/cancel 1.png';
+  static const String search = 'assets/images/Group (4).png';
 }

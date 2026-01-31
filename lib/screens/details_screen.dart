@@ -1,4 +1,5 @@
 import 'package:fitness_app/common/colors_services.dart';
+import 'package:fitness_app/common/images_services.dart';
 import 'package:fitness_app/widgets/step_card.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -120,10 +121,41 @@ class _DetailsScreenState extends State<DetailsScreen> {
               ),
             ],
           ),
+          
         ),
       ),
 
-     // bottomNavigationBar: CustomBottomNavigationBar(),
+     bottomNavigationBar:BottomNavigationBar(
+        backgroundColor: ColorsServices.white2,
+        type: BottomNavigationBarType.fixed,
+        currentIndex: 0,
+        selectedItemColor: ColorsServices.red,
+        unselectedItemColor: ColorsServices.grey,
+        onTap: (index) {
+         
+          setState(() {
+           
+          });
+        },
+        items: const [
+          BottomNavigationBarItem(
+            icon: ImageIcon(AssetImage(ImagesServices.home)),
+            label: '',
+          ),
+          BottomNavigationBarItem(
+            icon: ImageIcon(AssetImage(ImagesServices.notification)),
+            label: '',
+          ),
+          BottomNavigationBarItem(
+            icon: ImageIcon(AssetImage(ImagesServices.user)),
+            label: '',
+          ),
+          BottomNavigationBarItem(
+            icon: ImageIcon(AssetImage(ImagesServices.message)),
+            label: '',
+          ),
+        ],
+      )
     );
   }
 }

@@ -44,8 +44,8 @@ class _HomeTabState extends State<HomeTab> {
           ),
         ),
 
-        actions: const [
-          Icon(Icons.search, color: Colors.white),
+        actions:  [
+          Image.asset(ImagesServices.search),
           SizedBox(width: 10),
         ],
       ),

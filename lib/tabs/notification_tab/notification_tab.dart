@@ -1,4 +1,5 @@
 import 'package:fitness_app/common/colors_services.dart';
+import 'package:fitness_app/common/images_services.dart';
 import 'package:fitness_app/screens/home_screen.dart';
 import 'package:fitness_app/widgets/notification_card.dart';
 import 'package:fitness_app/widgets/notification_data_example.dart';
@@ -26,8 +27,8 @@ class NotificationTab extends StatelessWidget {
           ),
         ),
 
-        actions: const [
-          Icon(Icons.search, color: Colors.white),
+        actions:  [
+          Image.asset(ImagesServices.search),
           SizedBox(width: 10),
         ],
       ),
