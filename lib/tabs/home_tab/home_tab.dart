@@ -27,14 +27,20 @@ class _HomeTabState extends State<HomeTab> {
     ProfileTab(),
     MessageTab(),
   ];
+   final GlobalKey<ScaffoldState> scafold = GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: scafold,
       drawer: CustomDrawer(),
       appBar: AppBar(
         backgroundColor: ColorsServices.red,
         centerTitle: true,
-          leading: Image.asset(ImagesServices.drawerIcon),
+          leading: InkWell(
+            onTap: () {
+              scafold.currentState?.openDrawer();
+            },
+            child: Image.asset(ImagesServices.drawerIcon)),
         title: Text(
           'Home',
           style: GoogleFonts.faustina(
