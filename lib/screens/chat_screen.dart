@@ -3,10 +3,8 @@
 import 'package:fitness_app/common/colors_services.dart';
 import 'package:fitness_app/common/images_services.dart';
 import 'package:fitness_app/models/chat_message.dart';
-import 'package:fitness_app/screens/home_screen.dart';
 import 'package:fitness_app/tabs/message_tab/message_tab.dart';
 import 'package:fitness_app/widgets/chat_bubble.dart';
-import 'package:fitness_app/widgets/chat_input.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 

@@ -1,6 +1,7 @@
 import 'package:fitness_app/common/colors_services.dart';
+import 'package:fitness_app/models/notification_item.dart';
 import 'package:fitness_app/widgets/format_notification_time.dart';
-import 'package:fitness_app/widgets/notification_data_example.dart';
+
 import 'package:flutter/material.dart';
 
 
