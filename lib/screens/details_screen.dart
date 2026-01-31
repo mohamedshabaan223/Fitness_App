@@ -1,6 +1,4 @@
 import 'package:fitness_app/common/colors_services.dart';
-
-import 'package:fitness_app/widgets/custom_bottom_navigation_bar.dart';
 import 'package:fitness_app/widgets/step_card.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';

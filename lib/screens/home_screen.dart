@@ -4,13 +4,11 @@ import 'package:fitness_app/tabs/home_tab/home_tab.dart';
 import 'package:fitness_app/tabs/message_tab/message_tab.dart';
 import 'package:fitness_app/tabs/notification_tab/notification_tab.dart';
 import 'package:fitness_app/tabs/profile_tab/profile_tab.dart';
-import 'package:fitness_app/widgets/custom_bottom_navigation_bar.dart';
-import 'package:fitness_app/widgets/custom_drawer.dart';
 
-import 'package:fitness_app/widgets/plan_card.dart';
-import 'package:fitness_app/widgets/work_card.dart';
+
+
+
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
